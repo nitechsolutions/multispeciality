@@ -1,26 +1,184 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* ==========================================
+     BACKGROUND
+  ========================================== */
+
+  --background: #f5f9fd;
+  --foreground: #1f2937;
+
+  /* ==========================================
+     PRIMARY COLORS
+  ========================================== */
+
+  --primary: #1565d8;
+  --primary-hover: #0f56bd;
+  --primary-light: #eef5ff;
+
+  --secondary: #22b8cf;
+  --secondary-hover: #169db1;
+  --secondary-light: #edfafd;
+
+  --accent: #18b67a;
+  --accent-hover: #139a67;
+  --accent-light: #e9fbf4;
+
+  --danger: #ef4444;
+  --warning: #f59e0b;
+  --success: #16a34a;
+
+  /* ==========================================
+     SURFACE
+  ========================================== */
+
+  --card: #ffffff;
+  --card-hover: #fbfdff;
+
+  --header: #ffffff;
+  --footer: #0f172a;
+
+    --footer: #0f172a;
+--primary: #1565d8;
+--secondary: #22b8cf;
+--card: #ffffff;
+
+  --section-light: #ffffff;
+  --section-alt: #f7fbff;
+  --section-blue: #eef6ff;
+
+  /* ==========================================
+     TEXT
+  ========================================== */
+
+  --heading: #0f172a;
+  --text: #334155;
+  --text-light: #64748b;
+  --text-white: #ffffff;
+
+  /* ==========================================
+     BORDER
+  ========================================== */
+
+  --border: #e7edf5;
+  --border-dark: #d6e1ef;
+
+  --input: #ffffff;
+
+  --ring: rgba(21, 101, 216, 0.18);
+
+  /* ==========================================
+     BORDER RADIUS
+  ========================================== */
+
+  --radius-sm: 8px;
+  --radius: 12px;
+  --radius-lg: 18px;
+  --radius-xl: 26px;
+  --radius-2xl: 32px;
+
+  /* ==========================================
+     SHADOWS
+  ========================================== */
+
+  --shadow-sm: 0 2px 8px rgba(15, 23, 42, 0.05);
+
+  --shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+
+  --shadow-lg: 0 18px 45px rgba(15, 23, 42, 0.12);
+
+  --shadow-primary: 0 12px 30px rgba(21, 101, 216, 0.22);
+
+  /* ==========================================
+     NAVBAR
+  ========================================== */
+
+  --topbar: #114ea8;
+
+  --navbar-bg: rgba(255, 255, 255, 0.95);
+
+  --navbar-hover: #eef5ff;
+
+  --active-link: #1565d8;
+
+  /* ==========================================
+     BUTTONS
+  ========================================== */
+
+  --btn-primary: #1565d8;
+  --btn-primary-hover: #0f56bd;
+
+  --btn-secondary: #22b8cf;
+  --btn-secondary-hover: #169db1;
+
+  --btn-success: #16a34a;
+
+  /* ==========================================
+     TRANSITION
+  ========================================== */
+
+  --transition: all 0.3s ease;
+
+
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-primary-light: var(--primary-light);
+
+  --color-secondary: var(--secondary);
+  --color-secondary-hover: var(--secondary-hover);
+  --color-secondary-light: var(--secondary-light);
+
+  --color-accent: var(--accent);
+  --color-accent-light: var(--accent-light);
+
+  --color-card: var(--card);
+
+  --color-border: var(--border);
+
+  --font-sans: var(--font-inter);
+  --font-heading: var(--font-poppins);
+   --font-pixel: var(--font-pixel);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.left-bg {
+  background-color: #fcfaf8;
+
+  background-image:
+    linear-gradient(135deg,
+      transparent 0%,
+      transparent 48%,
+      rgba(233, 228, 223, 0.7) 48%,
+      rgba(233, 228, 223, 0.7) 52%,
+      transparent 52%),
+
+    linear-gradient(225deg,
+      transparent 0%,
+      transparent 72%,
+      rgba(248, 243, 238, 0.9) 72%,
+      rgba(248, 243, 238, 0.9) 100%);
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.right-bg {
+  background-color: #fcfaf8;
+
+  background-image:
+    linear-gradient(135deg,
+      transparent 0%,
+      transparent 48%,
+      rgba(233, 228, 223, 0.7) 48%,
+      rgba(233, 228, 223, 0.7) 52%,
+      transparent 52%),
+
+    linear-gradient(45deg,
+      transparent 0%,
+      transparent 72%,
+      rgba(248, 243, 238, 0.9) 72%,
+      rgba(248, 243, 238, 0.9) 100%);
 }
+
