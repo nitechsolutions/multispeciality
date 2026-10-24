@@ -1,4 +1,5 @@
 import AboutHospital from "@/components/home/AboutHospital";
+import Departments from "@/components/home/Departments";
 import Doctors from "@/components/home/Doctros";
 import Empanelments from "@/components/home/Empanelments";
 import Gallery from "@/components/home/Gallery";
@@ -14,10 +15,11 @@ export default function Home() {
        <HeroVideo />
        <AboutHospital />
        <Services/>
+       <Departments />
         <Doctors />
         <Empanelments />
         <Gallery />
-        {/* <GoogleReviews /> */}
+        <GoogleReviews />
         <GetInTouch/>
     </div>
   );

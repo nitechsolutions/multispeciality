@@ -7,33 +7,13 @@ import { empanelments } from "@/data/empanelments";
 import EmpanelmentCard from "../common/EmpanelmentCard";
 
 export default function Empanelments() {
-  const featuredEmpanelments = empanelments.slice(0, 4);
+  const featuredEmpanelments = empanelments.slice(0, 6);
 
   return (
-    <section className="relative overflow-hidden bg-section-light py-14 sm:py-16 lg:py-20">
+    <section className="relative overflow-hidden bg-section-light left-bg py-14 sm:py-16 lg:py-20">
       {/* ================= Background ================= */}
 
-      <div className="absolute inset-0 -z-10 overflow-hidden">
-        <div className="absolute -left-52 -top-16 h-72 w-72 rounded-full bg-primary/5 blur-3xl sm:h-96 sm:w-96 lg:h-[520px] lg:w-[520px]" />
-
-        <div className="absolute -right-40 bottom-0 h-72 w-72 rounded-full bg-secondary/5 blur-3xl sm:h-96 sm:w-96 lg:h-[520px] lg:w-[520px]" />
-
-        {/* Decorative Dots */}
-
-        <div className="absolute left-6 top-8 hidden opacity-20 md:block lg:left-20 lg:top-16">
-          <div className="grid grid-cols-5 gap-3">
-            {Array.from({ length: 25 }).map((_, index) => (
-              <span key={index} className="h-2 w-2 rounded-full bg-primary" />
-            ))}
-          </div>
-        </div>
-
-        {/* Decorative Plus */}
-
-        <div className="absolute right-4 top-4 hidden text-[120px] font-bold text-primary/5 lg:block xl:text-[180px]">
-          +
-        </div>
-      </div>
+    
 
       <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
         {/* ================= Heading ================= */}
@@ -115,7 +95,7 @@ export default function Empanelments() {
 
           {/* ================= Cards ================= */}
 
-          <div className="grid grid-cols-2 gap-4 p-4 sm:grid-cols-3 sm:p-6 lg:grid-cols-4 xl:grid-cols-4">
+          <div className="grid grid-cols-2 gap-4 p-4 sm:grid-cols-3 sm:p-6 lg:grid-cols-6 xl:grid-cols-6">
             {featuredEmpanelments.map((item) => (
               <EmpanelmentCard key={item.id} empanelment={item} />
             ))}

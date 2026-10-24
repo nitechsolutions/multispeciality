@@ -11,7 +11,7 @@ export default function Doctors() {
   const featuredDoctors = doctors.slice(0, 4);
 
   return (
-    <section className="relative overflow-hidden right-bg py-14 sm:py-16 lg:py-20">
+    <section className="relative overflow-hidden py-14 sm:py-16 lg:py-20">
       {/* ================= Background ================= */}
       <div className="absolute inset-0 -z-10 overflow-hidden">
         {/* Left Blur */}
