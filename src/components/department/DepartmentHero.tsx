@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import heroImage from "@/assets/heroBanners/department_banner.png";
+import heroImage from "@/assets/heroBanners/department_banner.webp";
 
 export default function DepartmentHero() {
   return (

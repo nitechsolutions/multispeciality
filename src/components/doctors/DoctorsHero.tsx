@@ -2,9 +2,8 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { ChevronRight } from "lucide-react";
 
-import heroImage from "@/assets/heroBanners/doctor_banner.png";
+import heroImage from "@/assets/heroBanners/doctor_banner.webp";
 
 export default function DoctorsHero() {
   return (

@@ -21,7 +21,7 @@ export default function DoctorCard({ doctor }: Props) {
           alt={doctor.name}
           width={500}
           height={600}
-          className="h-[200px] bg-gray-100 w-full object-cover transition-transform duration-500 group-active:scale-105 group-hover:scale-105 sm:h-[250px] lg:h-[350px] xl:h-[250px]"
+          className="h-[270px] bg-gray-100 w-full object-cover transition-transform duration-500 group-active:scale-105 group-hover:scale-105 sm:h-[280px] lg:h-[350px] xl:h-[250px]"
           sizes="(max-width:640px) 100vw,
                  (max-width:1024px) 50vw,
                  (max-width:1280px) 33vw,
@@ -37,12 +37,12 @@ export default function DoctorCard({ doctor }: Props) {
         </h3>
 
         {/* Degree */}
-        <p className="mt-2 text-center text-sm font-medium text-primary sm:text-base">
+        <p className="sm:mt-2 text-center text-sm font-medium text-primary sm:text-base">
           {doctor.degree}
         </p>
 
         {/* Details */}
-        <div className="space-y-3 mt-3">
+        <div className="space-y-1 mt-2">
           <div className="flex items-center gap-3">
             <div className="rounded-full bg-primary-light p-2">
               <CalendarDays
@@ -51,7 +51,7 @@ export default function DoctorCard({ doctor }: Props) {
               />
             </div>
 
-            <span className="sm:text-text text-sm">
+            <span className="sm:text-text  text-sm">
               {doctor.experience}
             </span>
           </div>

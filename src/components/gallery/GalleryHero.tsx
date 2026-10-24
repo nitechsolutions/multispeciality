@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import heroImage from "@/assets/heroBanners/gallery_banner.png";
+import heroImage from "@/assets/heroBanners/gallery_banner.webp";
 
 export default function GalleryHero() {
   return (

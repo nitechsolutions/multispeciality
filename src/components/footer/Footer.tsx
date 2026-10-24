@@ -59,9 +59,9 @@ export default function Footer() {
 
                 <div>
 
-                  <h4 className="mb-2 md:text-lg text-base font-semibold">
+                  <h3 className="mb-2 md:text-lg text-base font-semibold">
                     Emergency
-                  </h4>
+                  </h3>
 
                   <a
                     href="tel:+919999999999"
@@ -91,9 +91,9 @@ export default function Footer() {
 
                 <div>
 
-                  <h4 className="mb-2 md:text-lg text-base font-semibold">
+                  <h3 className="mb-2 md:text-lg text-base font-semibold">
                     Email
-                  </h4>
+                  </h3>
 
                   <a
                     href="mailto:info@mthospital.com"
@@ -116,9 +116,9 @@ export default function Footer() {
 
                 <div>
 
-                  <h4 className="mb-2 md:text-lg font-semibold">
+                  <h3 className="mb-2 md:text-lg font-semibold">
                     Address
-                  </h4>
+                  </h3>
 
                   <p className="max-w-md text-sm leading-8 text-slate-300">
                     Rajendra Nagar Chowk,

@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import heroImage from "@/assets/heroBanners/service_banner.png";
+import heroImage from "@/assets/heroBanners/service_banner.webp";
 
 export default function ServiceHero() {
   return (
