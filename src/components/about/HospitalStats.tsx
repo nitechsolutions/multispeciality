@@ -59,8 +59,8 @@ export default function HospitalStats() {
                 key={item.label}
                 className="flex items-center gap-4"
               >
-                <div className="rounded-2xl bg-white/15 p-4">
-                  <item.icon size={34} />
+                <div className="rounded-2xl bg-white/15 lg:p-4 p-3">
+                  <item.icon size={26} />
                 </div>
 
                 <div>
@@ -78,11 +78,11 @@ export default function HospitalStats() {
                     />
 
                     {item.suffix ? (
-                      <span className="ml-1 text-2xl font-semibold">
+                      <span className="ml-1 text-xl lg:text-2xl font-semibold">
                         {item.suffix}
                       </span>
                     ) : (
-                      <span className="ml-1 text-3xl font-bold">
+                      <span className="ml-1 text-xl lg:text-3xl font-bold">
                         +
                       </span>
                     )}

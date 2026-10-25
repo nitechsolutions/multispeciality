@@ -52,7 +52,7 @@ export default function Doctors() {
             <span className="ml-1 h-1 w-14 rounded-full bg-primary" />
           </div>
 
-          <h2 className="mt-5 font-heading text-3xl font-semibold text-heading sm:text-4xl lg:text-5xl">
+          <h2 className="mt-5 font-heading text-3xl font-semibold text-heading sm:text-4xl lg:text-4xl">
             Meet Our Expert Doctors
           </h2>
 

@@ -3,16 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import {
-  Phone,
-  Mail,
-  MapPin,
-  Clock3,
-  ArrowRight,
-  Ambulance,
-  HeartPulse,
-  ShieldCheck,
-} from "lucide-react";
+import { Phone, Mail, MapPin, Clock3, ArrowRight } from "lucide-react";
 
 import hospitalImage from "@/assets/home/hospital_img.webp";
 
@@ -43,21 +34,6 @@ const contactInfo = [
   },
 ];
 
-const features = [
-  {
-    icon: Ambulance,
-    title: "24×7 Emergency",
-  },
-  {
-    icon: HeartPulse,
-    title: "Expert Doctors",
-  },
-  {
-    icon: ShieldCheck,
-    title: "Trusted Care",
-  },
-];
-
 export default function GetInTouch() {
   return (
     <section className="relative overflow-hidden bg-section-light py-10">
@@ -85,7 +61,7 @@ export default function GetInTouch() {
             <span className="ml-1 h-[5px] w-14 rounded-full bg-primary"></span>
           </div>
 
-          <h2 className="mt-5 font-heading text-2xl font-bold text-heading lg:text-5xl">
+          <h2 className="mt-5 font-heading text-xl font-semibold text-heading sm:text-3xl lg:text-4xl">
             We're Always Ready To Help You
           </h2>
 
@@ -152,177 +128,148 @@ export default function GetInTouch() {
                 })}
               </div>
             </div>
-
-            
           </div>
-       
 
-        {/* Right Side */}
+          {/* Right Side */}
 
-        <div className="rounded-[30px] bg-white p-8 shadow-lg">
-          <h3 className="md:text-3xl text-2xl font-semibold text-heading">
-            Book An Appointment
-          </h3>
+          <div className="rounded-[30px] bg-white p-8 shadow-lg">
+            <h3 className="md:text-3xl text-2xl font-semibold text-heading">
+              Book An Appointment
+            </h3>
 
-          <p className="mt-3 text-sm leading-7 text-text-light">
-            Fill out the form below and our healthcare team will contact you as
-            soon as possible.
-          </p>
+            <p className="mt-3 text-sm leading-7 text-text-light">
+              Fill out the form below and our healthcare team will contact you
+              as soon as possible.
+            </p>
 
-          <form className="mt-8">
-            <div className="grid gap-5 md:grid-cols-2">
-              {/* Name */}
+            <form className="mt-8">
+              <div className="grid gap-5 md:grid-cols-2">
+                {/* Name */}
 
-              <div>
+                <div>
+                  <label className="mb-2 block text-sm font-medium text-heading">
+                    Full Name
+                  </label>
+
+                  <input
+                    type="text"
+                    placeholder="Enter your name"
+                    className="w-full rounded-xl border border-border bg-background px-4 py-3 text-sm outline-none transition focus:border-primary"
+                  />
+                </div>
+
+                {/* Phone */}
+
+                <div>
+                  <label className="mb-2 block text-sm font-medium text-heading">
+                    Phone Number
+                  </label>
+
+                  <input
+                    type="tel"
+                    placeholder="+91 98765 43210"
+                    className="w-full rounded-xl border border-border bg-background px-4 py-3 text-sm outline-none transition focus:border-primary"
+                  />
+                </div>
+
+                {/* Email */}
+
+                <div>
+                  <label className="mb-2 block text-sm font-medium text-heading">
+                    Email Address
+                  </label>
+
+                  <input
+                    type="email"
+                    placeholder="example@email.com"
+                    className="w-full rounded-xl border border-border bg-background px-4 py-3 text-sm outline-none transition focus:border-primary"
+                  />
+                </div>
+
+                {/* Department */}
+
+                <div>
+                  <label className="mb-2 block text-sm font-medium text-heading">
+                    Department
+                  </label>
+
+                  <select className="w-full rounded-xl border border-border bg-background px-4 py-3 text-sm outline-none transition focus:border-primary">
+                    <option>Select Department</option>
+
+                    <option>Cardiology</option>
+
+                    <option>Orthopedics</option>
+
+                    <option>Neurology</option>
+
+                    <option>Pediatrics</option>
+
+                    <option>Gynecology</option>
+
+                    <option>General Surgery</option>
+
+                    <option>Emergency Care</option>
+                  </select>
+                </div>
+              </div>
+
+              {/* Subject */}
+
+              <div className="mt-5">
                 <label className="mb-2 block text-sm font-medium text-heading">
-                  Full Name
+                  Subject
                 </label>
 
                 <input
                   type="text"
-                  placeholder="Enter your name"
+                  placeholder="Appointment / Health Query"
                   className="w-full rounded-xl border border-border bg-background px-4 py-3 text-sm outline-none transition focus:border-primary"
                 />
               </div>
 
-              {/* Phone */}
+              {/* Message */}
 
-              <div>
+              <div className="mt-5">
                 <label className="mb-2 block text-sm font-medium text-heading">
-                  Phone Number
+                  Message
                 </label>
 
-                <input
-                  type="tel"
-                  placeholder="+91 98765 43210"
-                  className="w-full rounded-xl border border-border bg-background px-4 py-3 text-sm outline-none transition focus:border-primary"
+                <textarea
+                  rows={6}
+                  placeholder="Write your message..."
+                  className="w-full resize-none rounded-xl border border-border bg-background px-4 py-3 text-sm outline-none transition focus:border-primary"
                 />
               </div>
 
-              {/* Email */}
+              {/* Submit */}
 
-              <div>
-                <label className="mb-2 block text-sm font-medium text-heading">
-                  Email Address
-                </label>
-
-                <input
-                  type="email"
-                  placeholder="example@email.com"
-                  className="w-full rounded-xl border border-border bg-background px-4 py-3 text-sm outline-none transition focus:border-primary"
-                />
+              <div className="mt-8">
+                <button
+                  type="submit"
+                  className="inline-flex items-center gap-3 rounded-xl bg-primary md:px-8 md:py-4 px-5 py-3 font-semibold text-white transition hover:bg-primary-hover"
+                >
+                  Send Message
+                  <ArrowRight size={18} />
+                </button>
               </div>
-
-              {/* Department */}
-
-              <div>
-                <label className="mb-2 block text-sm font-medium text-heading">
-                  Department
-                </label>
-
-                <select className="w-full rounded-xl border border-border bg-background px-4 py-3 text-sm outline-none transition focus:border-primary">
-                  <option>Select Department</option>
-
-                  <option>Cardiology</option>
-
-                  <option>Orthopedics</option>
-
-                  <option>Neurology</option>
-
-                  <option>Pediatrics</option>
-
-                  <option>Gynecology</option>
-
-                  <option>General Surgery</option>
-
-                  <option>Emergency Care</option>
-                </select>
-              </div>
-            </div>
-
-            {/* Subject */}
-
-            <div className="mt-5">
-              <label className="mb-2 block text-sm font-medium text-heading">
-                Subject
-              </label>
-
-              <input
-                type="text"
-                placeholder="Appointment / Health Query"
-                className="w-full rounded-xl border border-border bg-background px-4 py-3 text-sm outline-none transition focus:border-primary"
-              />
-            </div>
-
-            {/* Message */}
-
-            <div className="mt-5">
-              <label className="mb-2 block text-sm font-medium text-heading">
-                Message
-              </label>
-
-              <textarea
-                rows={6}
-                placeholder="Write your message..."
-                className="w-full resize-none rounded-xl border border-border bg-background px-4 py-3 text-sm outline-none transition focus:border-primary"
-              />
-            </div>
-
-            {/* Submit */}
-
-            <div className="mt-8">
-              <button
-                type="submit"
-                className="inline-flex items-center gap-3 rounded-xl bg-primary md:px-8 md:py-4 px-5 py-3 font-semibold text-white transition hover:bg-primary-hover"
-              >
-                Send Message
-                <ArrowRight size={18} />
-              </button>
-            </div>
-          </form>
-        </div>
-         </div>
-
-        {/* Bottom CTA */}
-
-        <div className="mt-10 rounded-3xl border border-border bg-blue-50 p-6">
-          <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
-            {/* Left */}
-
-            <div>
-              <h3 className="text-2xl font-semibold text-heading">
-                Need Immediate Medical Assistance?
-              </h3>
-
-              <p className="mt-2 max-w-xl text-sm leading-7 text-text-light">
-                Our emergency team is available 24 hours a day to provide
-                immediate medical care. Call us or visit our hospital anytime.
-              </p>
-            </div>
-
-            {/* Buttons */}
-
-            <div className="flex flex-wrap gap-4">
-              <a
-                href="tel:+919876543210"
-                className="inline-flex items-center gap-2 rounded-xl bg-primary px-6 py-3 text-sm font-semibold text-white transition hover:bg-primary-hover"
-              >
-                <Phone size={18} />
-                Call Emergency
-              </a>
-
-              <Link
-                href="/contact"
-                className="bg-white inline-flex items-center gap-2 rounded-xl border border-primary px-6 py-3 text-sm font-semibold text-primary transition hover:bg-primary hover:text-white"
-              >
-                Get Directions
-                <ArrowRight size={18} />
-              </Link>
-            </div>
+            </form>
           </div>
         </div>
+
+        <div className="w-full overflow-hidden border border-border shadow-lg mt-10">
+          <iframe
+            title="Hospital Location on Google Maps"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3696.990402873424!2d82.15061917506281!3d22.088183479839742!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a280b0da5367a43%3A0xa7568e35dc9fc578!2sCims%20Hospital%20Rd%2C%20Gond%20Para%2C%20Gol%20Bazar%2C%20Chhattisgarh%20495001!5e0!3m2!1sen!2sin!4v1792943585673!5m2!1sen!2sin"
+            width="100%"
+            height="350"
+            style={{ border: 0 }}
+            loading="lazy"
+            allowFullScreen
+            referrerPolicy="no-referrer-when-downgrade"
+            className="block w-full"
+          />
+        </div>
       </div>
-    
     </section>
   );
 }

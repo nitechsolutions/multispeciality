@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { ChevronRight, HeartHandshake, ShieldCheck, UserRound } from "lucide-react";
+import { HeartHandshake, ShieldCheck, UserRound } from "lucide-react";
 
 import heroImage from "@/assets/heroBanners/about_banner.webp";
 

@@ -102,7 +102,8 @@ export default function Gallery() {
 
           </div>
 
-          <h2 className="mt-6 font-heading text-4xl font-bold text-heading">
+          <h2 className="mt-5 font-heading text-xl font-semibold text-heading sm:text-3xl lg:text-4xl">
+
             A Glimpse Of Our Healthcare Facility
           </h2>
 
@@ -172,6 +173,13 @@ export default function Gallery() {
           >
             <ChevronRight size={28} />
           </button>
+          <div className="absolute flex gap-2 items-center bottom-3 left-1/2] z-50 "   >
+        {
+          gallery.map((_,i) => (
+            <div key={i} className={` transition-all w-3 h-3 bg-white rounded-full ${ current === i ? "p-2" : "opacity-50"}`} ></div>
+          ))
+        }
+      </div>
         </div>
 
        

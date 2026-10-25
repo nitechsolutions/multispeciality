@@ -19,10 +19,10 @@ export default function MissionVision() {
 
             <div className="flex gap-3 justify-center items-center rounded-full ">
               <Target
-                size={34}
-                className="text-primary h-12 w-12 "
+                size={14}
+                className="text-primary h-10 lg:h-12 lg:w-12 w-10 "
               />
-              <h3 className="text-3xl font-bold text-heading">
+              <h3 className="lg:text-3xl text-2xl font-bold text-heading">
                 Our Mission
               </h3>
             </div>
@@ -49,9 +49,10 @@ export default function MissionVision() {
             <div className="flex gap-3 items-center justify-center rounded-full ">
               <Eye
                 size={34}
-                className="text-secondary h-12 w-12 "
+               className="text-secondary h-10 lg:h-12 lg:w-12 w-10 "
+
               />
-              <h3 className="text-3xl font-bold text-heading">
+             <h3 className="lg:text-3xl text-2xl font-bold text-heading">
                 Our Vision
               </h3>
             </div>

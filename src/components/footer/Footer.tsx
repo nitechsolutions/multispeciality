@@ -318,36 +318,11 @@ export default function Footer() {
 
       <div className="border-t border-white/10">
 
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-5 px-6 py-6 md:flex-row">
+        <div className="m-auto w-full text-center  gap-5 px-6 py-2 ">
 
-          <p className="text-center text-sm text-slate-400 md:text-left">
+          <p className="text-center text-xs text-slate-400 ">
             © {new Date().getFullYear()} MT Hospital. All Rights Reserved.
           </p>
-
-          <div className="flex flex-wrap items-center gap-4 text-xs md:text-sm">
-
-            <Link
-              href="/privacy-policy"
-              className="text-slate-400 transition hover:text-secondary"
-            >
-              Privacy Policy
-            </Link>
-
-            <Link
-              href="/terms-and-conditions"
-              className="text-slate-400 transition hover:text-secondary"
-            >
-              Terms & Conditions
-            </Link>
-
-            <Link
-              href="/contact"
-              className="text-slate-400 transition hover:text-secondary"
-            >
-              Contact
-            </Link>
-
-          </div>
 
         </div>
 

@@ -2,8 +2,6 @@
 
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-
-import DoctorCard from "../common/DoctorCard";
 import { departments } from "@/data/department";
 import DepartmentCard from "../department/DepartmentCard";
 
@@ -52,7 +50,8 @@ export default function Departments() {
             <span className="ml-1 h-1 w-14 rounded-full bg-primary" />
           </div>
 
-          <h2 className="mt-5 font-heading text-3xl font-semibold text-heading sm:text-4xl lg:text-5xl">
+          <h2 className="mt-5 font-heading text-xl font-semibold text-heading sm:text-3xl lg:text-4xl">
+
             Explore Medical Departments
           </h2>
 
@@ -77,28 +76,7 @@ export default function Departments() {
         <div className="mt-10 flex justify-center sm:mt-12">
           <Link
             href="/departments"
-            className="
-              group
-              inline-flex
-              items-center
-              justify-center
-              gap-3
-              rounded-xl
-              bg-primary
-              px-6
-              py-3
-              text-sm
-              font-semibold
-              text-white
-              shadow-primary
-              transition-all
-              duration-300
-              hover:-translate-y-1
-              hover:bg-primary-hover
-              sm:px-8
-              sm:py-3.5
-              sm:text-base
-            "
+            className="group inline-flex items-center justify-center gap-3 rounded-xl bg-primary px-6 py-3 text-sm font-semibold text-white shadow-primary transition-all duration-300 hover:-translate-y-1 hover:bg-primary-hover sm:px-8 sm:py-3.5 sm:text-base"
           >
             View All
 
