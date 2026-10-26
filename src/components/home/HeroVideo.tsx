@@ -9,14 +9,14 @@ import {
 
 export default function HeroVideo() {
   return (
-    <section className="relative overflow-hidden">
+    <section className="relative h-[38vh] lg:h-full overflow-hidden">
       {/* Background Video */}
       <video
         autoPlay
         muted
         loop
         playsInline
-        className="absolute inset-0  w-full object-cover"
+        className="absolute inset-0  w-full h-full object-cover"
       >
         <source src="/hospital_video.mp4" type="video/mp4" />
         Your browser does not support the video tag.

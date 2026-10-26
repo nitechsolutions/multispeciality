@@ -7,11 +7,13 @@ import { usePathname } from "next/navigation";
 import MobileMenu from "./MobileMenu";
 import { navLinks } from "./NavLinks";
 import { Phone, Mail, MapPin, Clock3, ArrowRight } from "lucide-react";
+import { useAppointment } from "../common/appointment/AppointmentProvider";
 
 export default function Navbar() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const [appointmentPopup, setAppointmentPopup] = useState(false);
+  const { openAppointment } = useAppointment();
 
   const [form, setForm] = useState({
     name: "",
@@ -122,9 +124,8 @@ ${form.message}
             </a> */}
 
             <button
-               onClick={() =>
-                setAppointmentPopup(true)
-              }
+              type="button"
+              onClick={openAppointment}
               className="rounded-lg bg-primary px-5 py-3 font-semibold text-white transition hover:bg-primary/90"
             >
               Book Appointment
@@ -217,7 +218,6 @@ ${form.message}
                   </div>
 
                   {/* Doctor */}
-                  
 
                   {/* Timings */}
                   <div className="flex items-start gap-4">

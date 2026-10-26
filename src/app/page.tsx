@@ -1,3 +1,4 @@
+import CTAButton from "@/components/common/CTAButton";
 import AboutHospital from "@/components/home/AboutHospital";
 import Departments from "@/components/home/Departments";
 import Doctors from "@/components/home/Doctros";
@@ -8,19 +9,18 @@ import GoogleReviews from "@/components/home/GoogleReviews";
 import HeroVideo from "@/components/home/HeroVideo";
 import Services from "@/components/home/Services";
 
-
 export default function Home() {
   return (
-    <div >
-       <HeroVideo />
-       <AboutHospital />
-       <Services/>
-       <Departments />
-        <Doctors />
-        <Empanelments />
-        <Gallery />
-        <GoogleReviews />
-        <GetInTouch/>
+    <div>
+      <HeroVideo />
+      <AboutHospital />
+      <Services />
+      <Departments />
+      <Doctors />
+      <Empanelments />
+      <Gallery />
+      <GoogleReviews />
+      <GetInTouch />
     </div>
   );
 }
