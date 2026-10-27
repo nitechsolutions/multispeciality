@@ -6,10 +6,12 @@ import {
   ShieldCheck,
   ChevronDown,
 } from "lucide-react";
+import { useAppointment } from "../common/appointment/AppointmentProvider";
 
 export default function HeroVideo() {
+    const { openAppointment } = useAppointment();
   return (
-    <section className="relative h-[38vh] lg:h-full overflow-hidden">
+    <section className="relative h-[38vh] sm:h-[40vh] lg:h-full overflow-hidden">
       {/* Background Video */}
       <video
         autoPlay
@@ -29,12 +31,12 @@ export default function HeroVideo() {
       <div className="absolute " />
 
       {/* Content */}
-      <div className="relative z-10 flex min-h-[180px] sm:min-h-[220px] md:min-h-[430px] lg:min-h-[620px] w-full items-center">
+      <div className="relative z-10 flex min-h-[230px] sm:min-h-[280px] md:min-h-[300px] lg:min-h-[620px] w-full items-center">
         <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-xl lg:max-w-2xl">
 
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 md:px-4 md:py-2 px-3 py-1 backdrop-blur-md">
+            <div className="inline-flex items-center gap-2 rounded-full border border-white/20  bg-white/10 md:px-4 md:py-2 px-3 py-1 backdrop-blur-md">
               <HeartPulse
                 size={16}
                 className="text-accent"
@@ -55,7 +57,7 @@ export default function HeroVideo() {
             </h1>
 
             {/* Description */}
-            <p className="mt-4 lg:mt-6 max-w-xl leading-3 lg:leading-7 text-slate-200 text-xs sm:text-sm md:text-md lg:text-lg "
+            <p className="mt-4 lg:mt-6 max-w-xl leading-5 lg:leading-7 text-slate-200 text-xs sm:text-sm md:text-md lg:text-lg "
             >
               Providing world-class healthcare with experienced doctors,
               advanced medical technology, emergency services,
@@ -65,11 +67,13 @@ export default function HeroVideo() {
 
             {/* Buttons */}
             <div className="mt-8 lg:flex lg:flex-row gap-4 hidden">
-              <button className="rounded-xl bg-primary px-7 py-3 text-sm font-semibold text-white shadow-lg transition hover:bg-primary-hover">
+              <button
+              onClick={openAppointment}
+               className="rounded-xl bg-primary px-7 py-3 text-sm font-semibold text-white shadow-lg transition hover:bg-primary-hover">
                 Book Appointment
               </button>
 
-              <button className="rounded-xl border border-white/30 bg-white/10 px-7 py-3 text-sm font-semibold text-white backdrop-blur transition hover:bg-white hover:text-heading">
+              <button className="rounded-xl border border-white/30 bg-white/10 px-7 py-3 text-sm font-semibold text-white backdrop-blur transition hover:bg-white hover:text-heading hover:text-black">
                 Emergency Call
               </button>
             </div>
@@ -121,7 +125,7 @@ function FeatureCard({
         {icon}
       </div>
 
-      <h3 className="text-base font-medium text-white group-hover:text-heading">
+      <h3 className="text-base font-medium text-white group-hover:text-heading group-hover:text-black">
         {title}
       </h3>
     </div>

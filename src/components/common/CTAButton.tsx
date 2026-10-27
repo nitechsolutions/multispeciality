@@ -31,7 +31,7 @@ export default function CTAButton({
     focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary/20
     active:translate-y-0
     cursor-pointer
-    lg:hidden
+    xl:hidden
     ${className}
   `;
 

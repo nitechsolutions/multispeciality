@@ -1,7 +1,5 @@
 "use client";
 
-import Link from "next/link";
-import { ArrowRight } from "lucide-react";
 
 import DoctorCard from "../common/DoctorCard";
 import { doctors } from "@/data/doctors";

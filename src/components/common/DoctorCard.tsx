@@ -22,10 +22,7 @@ export default function DoctorCard({ doctor }: Props) {
           width={500}
           height={600}
           className="h-[270px] bg-gray-100 w-full object-cover transition-transform duration-500 group-active:scale-105 group-hover:scale-105 sm:h-[280px] lg:h-[350px] xl:h-[250px]"
-          sizes="(max-width:640px) 100vw,
-                 (max-width:1024px) 50vw,
-                 (max-width:1280px) 33vw,
-                 25vw"
+          sizes="(max-width:640px) 100vw,(max-width:1024px) 50vw,(max-width:1280px) 33vw,25vw"
         />
       </div>
 

@@ -5,8 +5,10 @@ import {
   CalendarDays,
   ArrowRight,
 } from "lucide-react";
+import { useAppointment } from "../common/appointment/AppointmentProvider";
 
 export default function AppointmentCTA() {
+   const { openAppointment } = useAppointment();
   return (
     <section className="pb-10">
       <div className="mx-auto max-w-7xl px-5 lg:px-8">
@@ -39,14 +41,14 @@ export default function AppointmentCTA() {
 
             </div>
 
-            <Link
-              href="/contact"
+            <button
+              onClick={openAppointment}
               className="inline-flex text-sm md:text-md items-center gap-3 rounded-xl bg-white px-6 py-2 md:px-7 md:py-3 font-semibold text-primary transition hover:scale-105"
             >
               Book Appointment
 
               <ArrowRight size={18} />
-            </Link>
+            </button>
 
           </div>
 

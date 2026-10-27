@@ -23,7 +23,7 @@ const contactInfo = [
   {
     icon: MapPin,
     title: "Hospital Address",
-    value: "Rajendra Nagar Chowk, Bilaspur, Chhattisgarh",
+    value: "CIMS hospital, Gol Bazar, Bilaspur C.G.",
     href: "/contact",
   },
   {
@@ -134,7 +134,7 @@ export default function GetInTouch() {
 
           <div className="rounded-[30px] bg-white p-8 shadow-lg">
             <h3 className="md:text-3xl text-2xl font-semibold text-heading">
-              Book An Appointment
+             Send Us a Message
             </h3>
 
             <p className="mt-3 text-sm leading-7 text-text-light">
@@ -143,10 +143,10 @@ export default function GetInTouch() {
             </p>
 
             <form className="mt-8">
-              <div className="grid gap-5 md:grid-cols-2">
+             
                 {/* Name */}
 
-                <div>
+                <div className="mt-5">
                   <label className="mb-2 block text-sm font-medium text-heading">
                     Full Name
                   </label>
@@ -160,13 +160,12 @@ export default function GetInTouch() {
 
                 {/* Phone */}
 
-                <div>
+                <div className="mt-5">
                   <label className="mb-2 block text-sm font-medium text-heading">
                     Phone Number
                   </label>
 
                   <input
-                    type="tel"
                     placeholder="+91 98765 43210"
                     className="w-full rounded-xl border border-border bg-background px-4 py-3 text-sm outline-none transition focus:border-primary"
                   />
@@ -174,44 +173,10 @@ export default function GetInTouch() {
 
                 {/* Email */}
 
-                <div>
-                  <label className="mb-2 block text-sm font-medium text-heading">
-                    Email Address
-                  </label>
-
-                  <input
-                    type="email"
-                    placeholder="example@email.com"
-                    className="w-full rounded-xl border border-border bg-background px-4 py-3 text-sm outline-none transition focus:border-primary"
-                  />
-                </div>
 
                 {/* Department */}
 
-                <div>
-                  <label className="mb-2 block text-sm font-medium text-heading">
-                    Department
-                  </label>
-
-                  <select className="w-full rounded-xl border border-border bg-background px-4 py-3 text-sm outline-none transition focus:border-primary">
-                    <option>Select Department</option>
-
-                    <option>Cardiology</option>
-
-                    <option>Orthopedics</option>
-
-                    <option>Neurology</option>
-
-                    <option>Pediatrics</option>
-
-                    <option>Gynecology</option>
-
-                    <option>General Surgery</option>
-
-                    <option>Emergency Care</option>
-                  </select>
-                </div>
-              </div>
+          
 
               {/* Subject */}
 

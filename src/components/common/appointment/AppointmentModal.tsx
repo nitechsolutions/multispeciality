@@ -6,13 +6,12 @@ import {
   Phone,
   MapPin,
   Clock3,
-  CalendarDays,
   MessageCircle,
   CheckCircle2,
 } from "lucide-react";
 import { useAppointment } from "./AppointmentProvider";
 
-const WHATSAPP_NUMBER = "917999999999"; // Replace with your hospital's WhatsApp number.
+const WHATSAPP_NUMBER = "918889706313"; // Replace with your hospital's WhatsApp number.
 
 const initialForm = {
   name: "",
@@ -54,10 +53,7 @@ export default function AppointmentModal() {
 
   if (!isOpen) return null;
 
-  const updateField = (
-    field: keyof typeof initialForm,
-    value: string,
-  ) => {
+  const updateField = (field: keyof typeof initialForm, value: string) => {
     setForm((previous) => ({ ...previous, [field]: value }));
   };
 
@@ -97,7 +93,7 @@ export default function AppointmentModal() {
         className="relative my-auto grid max-h-[94dvh] w-full max-w-5xl  rounded-2xl bg-white shadow-2xl sm:rounded-3xl lg:grid-cols-[0.8fr_1.2fr]"
       >
         <button
-          type="button"
+          
           onClick={closeAppointment}
           aria-label="Close appointment form"
           className="absolute right-3 top-3 z-20 flex h-10 w-10 items-center justify-center rounded-full border border-border bg-white text-slate-600 shadow-sm transition hover:bg-primary-light hover:text-primary sm:right-4 sm:top-4"
@@ -130,9 +126,7 @@ export default function AppointmentModal() {
               </span>
               <div>
                 <p className="text-xs text-white/70">Call us</p>
-                <p className="mt-1 text-sm font-semibold">
-                  +91 79999 99999
-                </p>
+                <p className="mt-1 text-sm font-semibold">+91 79999 99999</p>
               </div>
             </div>
 
@@ -143,7 +137,7 @@ export default function AppointmentModal() {
               <div>
                 <p className="text-xs text-white/70">Visit us</p>
                 <p className="mt-1 text-sm leading-6">
-                  Satya Clinic, Main Road, Madhya Pradesh
+                  CIMS hospital, Gol Bazar, Bilaspur C.G.
                 </p>
               </div>
             </div>
@@ -168,8 +162,8 @@ export default function AppointmentModal() {
         </aside>
 
         {/* Appointment form */}
-        <div className=" p-5 pt-16 sm:p-7 sm:pt-16 lg:p-9">
-          <div className="mb-6">
+        <div className=" p-5 pt-16 sm:p-7  sm:pt-16 lg:p-9 bg-white">
+          <div className="mb-6 h">
             <span className="text-xs font-bold uppercase tracking-widest text-primary">
               Book a consultation
             </span>
@@ -254,6 +248,11 @@ export default function AppointmentModal() {
                   <option>Medical Imaging</option>
                   <option>Health Checkup</option>
                   <option>General Surgery</option>
+                  <option>Cardiology</option>
+                  <option>Orthopedics</option>
+                  <option>Neurology</option>
+                  <option>Pediatrics</option>
+                  <option>Gynecology</option>
                   <option>Other</option>
                 </select>
               </div>

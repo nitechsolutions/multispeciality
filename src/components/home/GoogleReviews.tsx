@@ -87,72 +87,7 @@ export default function GoogleReviews() {
 
   const getIndex = (offset: number) => (current + offset + total) % total;
 
-  const ReviewCard = ({
-    item,
-    featured = false,
-  }: {
-    item: Review;
-    featured?: boolean;
-  }) => (
-    <div
-      className={`h-full rounded-2xl border border-border bg-white p-5 sm:p-7 ${
-        featured ? "shadow-xl" : "shadow-md"
-      }`}
-    >
-      {/* Reviewer information */}
-      <div className="flex items-start justify-between gap-3">
-        <div className="flex min-w-0 items-center gap-3">
-          <div
-            className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-full text-lg font-semibold text-white ${item.color}`}
-          >
-            {item.avatar}
-          </div>
-
-          <div className="min-w-0">
-            <h3 className="truncate text-sm font-semibold text-heading sm:text-base">
-              {item.name}
-            </h3>
-
-            <p className="mt-1 text-xs text-text-light">{item.date}</p>
-          </div>
-        </div>
-
-        <Image
-          src="/google-logo-svg.svg"
-          alt="Google"
-          width={24}
-          height={24}
-          className="h-6 w-6 shrink-0 object-contain"
-        />
-      </div>
-
-      {/* Rating */}
-      {/* Dynamic Rating */}
-      <div
-        className="mt-4 flex items-center gap-1"
-        role="img"
-        aria-label={`${item.rating} out of 5 stars`}
-      >
-        {Array.from({ length: 5 }, (_, index) => (
-          <Star
-            key={index}
-            size={17}
-            fill={index < item.rating ? "#f4b400" : "transparent"}
-            stroke={index < item.rating ? "#f4b400" : "#cbd5e1"}
-          />
-        ))}
-      </div>
-
-      {/* Review text */}
-      <p
-        className={`mt-4 leading-7 text-text ${
-          featured ? "text-sm sm:text-base" : "text-sm"
-        }`}
-      >
-        {item.review}
-      </p>
-    </div>
-  );
+  
 
   return (
     <section className="overflow-hidden bg-section-alt py-16 sm:py-20">
@@ -239,3 +174,70 @@ export default function GoogleReviews() {
     </section>
   );
 }
+
+const ReviewCard = ({
+    item,
+    featured = false,
+  }: {
+    item: Review;
+    featured?: boolean;
+  }) => (
+    <div
+      className={`h-full rounded-2xl border border-border bg-white p-5 sm:p-7 ${
+        featured ? "shadow-xl" : "shadow-md"
+      }`}
+    >
+      {/* Reviewer information */}
+      <div className="flex items-start justify-between gap-3">
+        <div className="flex min-w-0 items-center gap-3">
+          <div
+            className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-full text-lg font-semibold text-white ${item.color}`}
+          >
+            {item.avatar}
+          </div>
+
+          <div className="min-w-0">
+            <h3 className="truncate text-sm font-semibold text-heading sm:text-base">
+              {item.name}
+            </h3>
+
+            <p className="mt-1 text-xs text-text-light">{item.date}</p>
+          </div>
+        </div>
+
+        <Image
+          src="/google-logo-svg.svg"
+          alt="Google"
+          width={24}
+          height={24}
+          className="h-6 w-6 shrink-0 object-contain"
+        />
+      </div>
+
+      {/* Rating */}
+      {/* Dynamic Rating */}
+      <div
+        className="mt-4 flex items-center gap-1"
+        role="img"
+        aria-label={`${item.rating} out of 5 stars`}
+      >
+        {Array.from({ length: 5 }, (_, index) => (
+          <Star
+            key={index}
+            size={17}
+            fill={index < item.rating ? "#f4b400" : "transparent"}
+            stroke={index < item.rating ? "#f4b400" : "#cbd5e1"}
+          />
+        ))}
+      </div>
+
+      {/* Review text */}
+      <p
+        className={`mt-4 leading-7 text-text ${
+          featured ? "text-sm sm:text-base" : "text-sm"
+        }`}
+      >
+        {item.review}
+      </p>
+    </div>
+  );
