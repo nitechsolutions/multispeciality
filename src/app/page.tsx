@@ -1,3 +1,4 @@
+import CampaignPopup from "@/components/common/CampaignPopup";
 import CTAButton from "@/components/common/CTAButton";
 import AboutHospital from "@/components/home/AboutHospital";
 import Departments from "@/components/home/Departments";
@@ -12,6 +13,8 @@ import Services from "@/components/home/Services";
 export default function Home() {
   return (
     <div>
+      <CampaignPopup />
+
       <HeroVideo />
       <AboutHospital />
       <Services />
