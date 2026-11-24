@@ -68,7 +68,7 @@ export default function AboutHospital() {
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
           {/* Left */}
           <div>
-            <h2 className="text-4xl font-bold py-5 ">Welcome to DK Hospital</h2>
+            <h2 className="text-4xl font-bold py-5 ">Welcome to MT Hospital</h2>
 
 
             <p className="text-base sm:leading-8  sm:text-lg">
